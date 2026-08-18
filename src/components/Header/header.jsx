@@ -19,16 +19,7 @@ function Header() {
             </div>
           </a>
 
-          <div className="header__badge">
-            <img
-              src="/icons/reestr-icon.svg"
-              alt="В реестре"
-              className="header__badge-icon"
-            />
-            <span className="header__badge-text">
-              В РЕЕСТРЕ <br /> РОССИЙСКОЙ <br /> ПРОДУКЦИИ
-            </span>
-          </div>
+
         </div>
 
         <div className="header__right">
@@ -41,8 +32,8 @@ function Header() {
             </button>
             {workTimeOpen && (
               <div className="header__worktime-dropdown">
-                <p>Пн–Пт: 8:00–17:00</p>
-                <p>Сб–Вс: выходной</p>
+                <p>Пн–Пт: 8:00-17:00</p>
+                <p>Сб-Вс: выходной</p>
               </div>
             )}
             <p className="header__address">г. Нижний Новгород ул. Торфяная, 35</p>

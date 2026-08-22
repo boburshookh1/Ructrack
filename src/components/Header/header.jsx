@@ -30,7 +30,7 @@ const Header = () => {
           </div>
           <div className="header_phonet flex justify-between mt-4">
             <div className="phonet_text flex flex-col items-end mr-6">
-              <p className="text-[#A1A1A1] font-normal font-primary  text-[15px] leading-[110%]">
+              <p className="text-[#A1A1A1] font-n ormal font-primary  text-[15px] leading-[110%]">
                 Для регионов: 8 (800) 77-77-210
               </p>
               <p className="text-[#A1A1A1] font-normal font-primary  text-[15px] leading-[110%]">
@@ -57,38 +57,59 @@ const Header = () => {
       </div>
       <hr className="border-t border-[#FEC80B] mt-2.25" />
 
-      <div className="header__bottom mt-3 relative">
+      <div className="header__bottom mt-3 relative max-w-330 mx-auto">
         <div className="container flex items-center justify-between">
           <div className="menu__list flex items-center gap-7.5">
             <button
               onClick={() => toggleMenu("catalog")}
-              className="catalog_btn flex items-center gap-2 bg-[#FEC80B] rounded-[5px] px-4 py-2.5 font-normal font-primary text-[15px]"
+              className="catalog_btn w-34 h-10 flex items-center justify-center gap-2 bg-[#FEC80B] rounded-[5px] px-4 py-2.5 font-normal font-primary text-lg"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  fill="currentColor"
-                  d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
-                />
-              </svg>
+              <span className="relative w-5 h-5 shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+                    activeMenu === "catalog"
+                      ? "opacity-0 rotate-90 scale-75"
+                      : "opacity-100 rotate-0 scale-100"
+                  }`}
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="currentColor"
+                    d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
+                  />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
+                    activeMenu === "catalog"
+                      ? "opacity-100 rotate-0 scale-100"
+                      : "opacity-0 -rotate-90 scale-75"
+                  }`}
+                >
+                  <path
+                    fill="currentColor"
+                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"
+                  />
+                </svg>
+              </span>
               Каталог
             </button>
 
-            <ul className="nav_list flex items-center gap-6 font-normal font-primary text-[15px]">
+            <ul className="nav_list flex items-center gap-6 font-normal font-primary text-[18px]">
               <li
                 onClick={() => toggleMenu("about")}
-                className="flex items-center gap-1 cursor-pointer"
+                className="flex items-center gap-0 cursor-pointer -mr-2.5"
               >
                 О нас
                 <svg
+                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${
+                    activeMenu === "about" ? "rotate-180" : ""
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
                   viewBox="0 0 24 24"
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
@@ -98,13 +119,14 @@ const Header = () => {
 
               <li
                 onClick={() => toggleMenu("media")}
-                className="flex items-center gap-1 cursor-pointer"
+                className="flex items-center gap-0 cursor-pointer -mr-2.5"
               >
                 Медиа
                 <svg
+                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${
+                    activeMenu === "media" ? "rotate-180" : ""
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
                   viewBox="0 0 24 24"
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
@@ -124,7 +146,7 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="Поиск"
-                className="w-full border border-[#E5E5E5] rounded-[5px] py-2.5 px-4 pr-10 text-[15px] font-normal font-primary outline-none"
+                className="w-full max-w-[512px] h-[38px] border border-[#FEC80B] rounded-[40px] py-2.5 px-4 pr-10 text-[18px] font-normal font-primary outline-none"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +198,7 @@ const Header = () => {
         </div>
 
         {activeMenu && (
-          <div className="dropdown_panel absolute left-0 top-full w-full bg-[#F5F5F5] border-t border-[#FEC80B] py-10 z-50">
+          <div className="dropdown_panel absolute left-0 top-full w-full h-[556px] bg-[#F5F5F5] border-t border-[#FEC80B] py-10 z-50">
             <div className="container grid grid-cols-4 gap-10">
               <div className="dropdown_col">
                 <h4 className="font-bold text-lg mb-4">Категории</h4>

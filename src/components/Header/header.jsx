@@ -57,7 +57,7 @@ const Header = () => {
       </div>
       <hr className="border-t border-[#FEC80B] mt-2.25" />
 
-      <div className="header__bottom mt-3 relative max-w-330 mx-auto">
+      <div className="header__bottom mt-3 mb-6 relative max-w-330 mx-auto">
         <div className="container flex items-center justify-between">
           <div className="menu__list flex items-center gap-7.5">
             <button
@@ -68,11 +68,10 @@ const Header = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-                    activeMenu === "catalog"
-                      ? "opacity-0 rotate-90 scale-75"
-                      : "opacity-100 rotate-0 scale-100"
-                  }`}
+                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${activeMenu === "catalog"
+                    ? "opacity-0 rotate-90 scale-75"
+                    : "opacity-100 rotate-0 scale-100"
+                    }`}
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path
@@ -84,11 +83,10 @@ const Header = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${
-                    activeMenu === "catalog"
-                      ? "opacity-100 rotate-0 scale-100"
-                      : "opacity-0 -rotate-90 scale-75"
-                  }`}
+                  className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${activeMenu === "catalog"
+                    ? "opacity-100 rotate-0 scale-100"
+                    : "opacity-0 -rotate-90 scale-75"
+                    }`}
                 >
                   <path
                     fill="currentColor"
@@ -106,9 +104,8 @@ const Header = () => {
               >
                 О нас
                 <svg
-                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${
-                    activeMenu === "about" ? "rotate-180" : ""
-                  }`}
+                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${activeMenu === "about" ? "rotate-180" : ""
+                    }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -123,9 +120,8 @@ const Header = () => {
               >
                 Медиа
                 <svg
-                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${
-                    activeMenu === "media" ? "rotate-180" : ""
-                  }`}
+                  className={`text-[#FEC80B] w-8 h-8 transition-transform duration-200 ${activeMenu === "media" ? "rotate-180" : ""
+                    }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -198,7 +194,7 @@ const Header = () => {
         </div>
 
         {activeMenu && (
-          <div className="dropdown_panel absolute left-0 top-full w-full h-[556px] bg-[#F5F5F5] border-t border-[#FEC80B] py-10 z-50">
+          <div className="dropdown_panel absolute left-0 top-full w-full h-[600px] bg-[#F5F5F5]  py-10 z-50">
             <div className="container grid grid-cols-4 gap-10">
               <div className="dropdown_col">
                 <h4 className="font-bold text-lg mb-4">Категории</h4>

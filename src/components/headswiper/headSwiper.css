@@ -3,61 +3,37 @@
   --text-size-sm: 18px;
 }
 
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  font-family:
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  margin-top: 3 0px;
+.mySwiper {
+  margin-top: 30px;
   width: 100%;
   max-width: 1320px;
-  height: 100%;
   height: 570px;
   border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   font-size: 18px;
   background: #444;
-
   display: flex;
-
   align-items: center;
 }
 
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-}
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
   color: #ffffff;
   height: 21px;
   width: 21px;
 }
+
 .mySwiper .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
@@ -80,24 +56,23 @@ body {
   text-align: left;
   justify-content: center;
   max-width: 500px;
-  font-family: \y;
   color: #ffffff;
   margin-left: 32px;
 }
+
 .hero__title h1 {
   font-size: 32px;
   font-weight: 800;
   line-height: 120%;
-
-
 }
+
 .hero__title p {
-  font-family: font-primary;
-  font-style: 18px;
+  font-family: var(--font-primary);
+  font-size: 18px;
   letter-spacing: 2px;
   line-height: 150%;
 }
 
-.swiperHead-btn{
+.swiperHead-btn {
   display: flex;
 }

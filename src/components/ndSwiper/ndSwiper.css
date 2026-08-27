@@ -1,0 +1,160 @@
+.categoriesWrap {
+  width: 100%;
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.categoriesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.categoriesHeader h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.categoriesNav {
+  display: flex;
+  gap: 12px;
+}
+
+.catNavBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.catNavBtn:hover {
+  background: #FEC80B;
+}
+
+.catNavBtn.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.secondSwiper {
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.secondSwiper .swiper-slide,
+.secondSwiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 28px 28px 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: left;
+}
+
+.secondSwiper-slide {
+  border: 1px solid #e5e5e5;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.secondSwiper-slide:hover {
+  border-color: #FEC80B;
+  box-shadow: 0 8px 24px #FEC80B40;
+}
+
+.catCardText h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 6px;
+  line-height: 1.25;
+  min-height: 56px;
+}
+
+.catCardText p {
+  font-size: 15px;
+  color: #9a9a9a;
+  margin: 0 0 12px;
+}
+
+.catCardImg {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.secondSwiper .swiper-slide img,
+.secondSwiper-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
+}
+
+.categoriesWrap{
+  position: relative;
+}
+
+.secondSwiper .swiper-button-prev,
+.secondSwiper .swiper-button-next {
+  position: absolute;
+  top: -34px;
+  width: 39px;
+  height: 39px;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 8px;
+  border-radius: 4px;
+}
+.secondSwiper .swiper-button-prev:hover,
+.secondSwiper .swiper-button-next:hover{
+  background-color: #FEC80B;
+}
+.secondSwiper {
+  overflow: visible !important;
+}
+
+.secondSwiper .swiper-button-next {
+  right: 0;
+  left: auto;
+}
+
+.secondSwiper .swiper-button-prev {
+  right: 50px;
+  left: auto;
+}
+
+
+.categoriesWrap{
+  max-width: 1370px;
+
+}
+
+@media (max-width: 640px) {
+  .categoriesHeader h2 {
+    font-size: 26px;
+  }
+  .catCardText h3 {
+    font-size: 18px;
+    min-height: auto;
+  }
+}
+
+
